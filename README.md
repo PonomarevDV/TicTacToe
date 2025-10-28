@@ -21,41 +21,32 @@ Clone the repository and install the dependency:
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
 pip install colorama
+```
+---
+
+## 🕹️ How to Play
+
+Enter moves as `row column` (e.g., `0 2`, `1 1`).
+
+- Player **X** starts first.
+- Align three marks in a row (horizontal, vertical, or diagonal) to win.
+- If the board is full and no one wins — it’s a draw.
 
 ---
 
-Run the game:
-python main.py
+## 🧩 Game Logic Overview
+
+- Board: 3×3 list of lists.
+- After each move the program checks:
+- Each row
+- Each column
+- Both diagonals
+- On win, the game announces the winner and offers to restart.
 
 ---
 
-🕹️ How to Play
-Each player enters coordinates in the format:
-  row column
-For example:
-  0 2
-  1 1
--Player X starts first.
--The first player to align three marks in a row (horizontally, vertically, or diagonally) wins.
--If no empty spaces remain and no one has won - it's a draw.
+## 👤 Author
 
----
-
-🧩 Game Logic Overview
--The board is a 3×3 list.
--The program checks:
--Each row
--Each column
--Both diagonals
--When a player wins, the game announces the winner and offers to restart.
-
----
-
-🧑‍💻 Author
-Created with ❤️ by Danil Ponomarev
-
-
-
-
+Created with ❤️ by **Danil Ponomarev**.
 
 
