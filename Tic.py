@@ -1,7 +1,7 @@
 from colorama import Fore, Back, Style, init
 init(autoreset=True)
 
-
+# Рисуем двумерный список
 def draw_board(board):
     for i in range(3):
         colored_row = []
@@ -16,6 +16,7 @@ def draw_board(board):
         if i < 2:
             print("---------")
 
+# Вводим координаты и делаем ход
 def ask_and_make_move(player, board):
     x, y = ask_move(player, board)
     make_move(player, board, x, y)
@@ -36,6 +37,7 @@ def make_move(player, board, x, y):
     board[x][y] = player
     return True
 
+# Проверяем победителя
 def check_win(player, board):
     for i in range(3):
         if board[i] == [player, player, player]:
@@ -48,6 +50,7 @@ def check_win(player, board):
         return True
     return False
 
+# Ход игры
 def tic_tac_toe():
     while True:
         board = [[' ' for i in range(3)] for _ in range(3)]
@@ -55,9 +58,7 @@ def tic_tac_toe():
 
         while True:
             draw_board(board)
-
             ask_and_make_move(player, board)
-
             if check_win(player, board):
                 print(f'Player {player} wins!')
                 break
@@ -73,6 +74,7 @@ def tic_tac_toe():
         if restart != 'y':
             break
 
+# Запускаем игру
 if __name__ == "__main__":
     tic_tac_toe()
 
